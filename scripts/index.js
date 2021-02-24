@@ -4,7 +4,7 @@ const keyPressedHandler = (e) => {
     const num1KeyCode = 49
     const panel = panelContainersArray[e.keyCode - num1KeyCode]
     // panel.scrollIntoView()
-    console.log(panel.getBoundingClientRect().top)
+    console.log(panel.getBoundingClientRect().top1)
 }
 
 document.addEventListener("keypress",keyPressedHandler)
