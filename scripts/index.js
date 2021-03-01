@@ -17,7 +17,7 @@ const keyPressedHandler = (e) => {
 
     if (yCoord > 0){ // is the panel is not at the top
         currInterval = setInterval(() => {
-            console.log(panel.getBoundingClientRect().top)
+            // console.log(panel.getBoundingClientRect().top)/
             if (panel.getBoundingClientRect().top>=0) {
                 if (panel.getBoundingClientRect().top<10) {
                     window.scrollBy(0,panel.getBoundingClientRect().top)
@@ -32,7 +32,7 @@ const keyPressedHandler = (e) => {
         }, 10)
     } else if(yCoord < 0){
         currInterval = setInterval(() => {      
-            console.log(panel.getBoundingClientRect().top)     
+            // console.log(panel.getBoundingClientRect().top)     
             if (panel.getBoundingClientRect().top<=0) {
                 if (panel.getBoundingClientRect().top>-10) {
                     window.scrollBy(0,panel.getBoundingClientRect().top)

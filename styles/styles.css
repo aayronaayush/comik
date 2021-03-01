@@ -1,5 +1,4 @@
 .panel {
-  border: 3px dashed red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,4 +6,23 @@
 
 img {
   width: 70%;
+}
+
+.nav {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+
+.main {
+  display: inline;
+  width: 80%;
+  float: right;
 }
