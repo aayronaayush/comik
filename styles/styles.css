@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.navPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 70%;
 }
@@ -25,4 +31,8 @@ img {
   display: inline;
   width: 80%;
   float: right;
+}
+
+a.panel img:hover {
+  border: 2px solid white;
 }

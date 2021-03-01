@@ -1,12 +1,16 @@
 let panelContainers = document.getElementsByClassName("panel")
 let panelContainersArray = []
+
+let nav
+
 let panel = null
 let currInterval = -1
 let yCoord
 
-const keyPressedHandler = (e) => {
+const keyPressedHandler = (buttonCode) => {
+    console.log(buttonCode)
     const num1KeyCode = 49
-    panel = panelContainersArray[e.keyCode - num1KeyCode]
+    panel = panelContainersArray[buttonCode - num1KeyCode+6]
     yCoord = panel.getBoundingClientRect().top
     
     // if there currently an interval set remove it
@@ -50,7 +54,7 @@ const keyPressedHandler = (e) => {
     // panel.scrollIntoView()
 }
 
-document.addEventListener("keypress",keyPressedHandler)
+document.addEventListener("keypress",(e) => keyPressedHandler(e.keyCode))
 
 Object.keys(panelContainers).forEach(panelContainerKey => {
     console.log(window.innerHeight)
@@ -58,3 +62,15 @@ Object.keys(panelContainers).forEach(panelContainerKey => {
     panel.style.height = window.innerHeight+"px"
     panelContainersArray.push(panel)
 })
+
+// event listeners for nav items
+const panelOneNav = document.getElementById("1")
+const panelTwoNav = document.getElementById("2")
+const panelThreeNav = document.getElementById("3")
+const panelFourNav = document.getElementById("4")
+const panelFiveNav = document.getElementById("5")
+const panelSixNav = document.getElementById("6")
+
+// panel one arg is 49 panel 6 arg is 54
+
+panelOneNav.addEventListener("click",() => keyPressedHandler(49))
