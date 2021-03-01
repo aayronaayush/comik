@@ -12,7 +12,7 @@ const keyPressedHandler = (buttonCode) => {
     const num1KeyCode = 49
     panel = panelContainersArray[buttonCode - num1KeyCode+6]
     yCoord = panel.getBoundingClientRect().top
-    
+
     // if there currently an interval set remove it
     if (currInterval!=-1){
         clearInterval(currInterval)
@@ -32,11 +32,11 @@ const keyPressedHandler = (buttonCode) => {
             } else {
                 clearInterval(currInterval)
                 currInterval = -1
-            }    
+            }
         }, 10)
     } else if(yCoord < 0){
-        currInterval = setInterval(() => {      
-            // console.log(panel.getBoundingClientRect().top)     
+        currInterval = setInterval(() => {
+            // console.log(panel.getBoundingClientRect().top)
             if (panel.getBoundingClientRect().top<=0) {
                 if (panel.getBoundingClientRect().top>-10) {
                     window.scrollBy(0,panel.getBoundingClientRect().top)
@@ -47,7 +47,7 @@ const keyPressedHandler = (buttonCode) => {
             } else {
                 clearInterval(currInterval)
                 currInterval = -1
-            }    
+            }
         }, 10)
         // console.log("panel is above")
     }
@@ -72,5 +72,9 @@ const panelFiveNav = document.getElementById("5")
 const panelSixNav = document.getElementById("6")
 
 // panel one arg is 49 panel 6 arg is 54
-
 panelOneNav.addEventListener("click",() => keyPressedHandler(49))
+panelTwoNav.addEventListener("click",() => keyPressedHandler(50))
+panelThreeNav.addEventListener("click",() => keyPressedHandler(51))
+panelFourNav.addEventListener("click",() => keyPressedHandler(52))
+panelFiveNav.addEventListener("click",() => keyPressedHandler(53))
+panelSixNav.addEventListener("click",() => keyPressedHandler(54))
