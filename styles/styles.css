@@ -4,27 +4,21 @@
   align-items: center;
 }
 
-.navPanel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 img {
   width: 70%;
 }
 
 .nav {
   background-color: grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 30px;
+  text-align: center;
   position: fixed;
-  height: 100vh;
   top: 0;
   left: 0;
   width: 20%;
+  overflow: auto;
+  height: 95vh;
+  overflow: auto;
 }
 
 .main {
@@ -33,6 +27,6 @@ img {
   float: right;
 }
 
-a.panel img:hover {
+a.navPanel img:hover {
   width: 80%;
 }

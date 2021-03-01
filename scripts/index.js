@@ -10,7 +10,7 @@ let yCoord
 const keyPressedHandler = (buttonCode) => {
     console.log(buttonCode)
     const num1KeyCode = 49
-    panel = panelContainersArray[buttonCode - num1KeyCode+6]
+    panel = panelContainersArray[buttonCode - num1KeyCode]
     yCoord = panel.getBoundingClientRect().top
 
     // if there currently an interval set remove it
