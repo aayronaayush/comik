@@ -33,7 +33,7 @@ const keyPressedHandler = (buttonCode) => {
                 clearInterval(currInterval)
                 currInterval = -1
             }
-        }, 10)
+        })
     } else if(yCoord < 0){
         currInterval = setInterval(() => {
             // console.log(panel.getBoundingClientRect().top)
@@ -48,7 +48,7 @@ const keyPressedHandler = (buttonCode) => {
                 clearInterval(currInterval)
                 currInterval = -1
             }
-        }, 10)
+        })
         // console.log("panel is above")
     }
     // panel.scrollIntoView()
@@ -78,3 +78,21 @@ panelThreeNav.addEventListener("click",() => keyPressedHandler(51))
 panelFourNav.addEventListener("click",() => keyPressedHandler(52))
 panelFiveNav.addEventListener("click",() => keyPressedHandler(53))
 panelSixNav.addEventListener("click",() => keyPressedHandler(54))
+
+// cycle through images
+const groupPanelImage = document.getElementById("groupImage")
+groupPanelImageSources = [
+    "./images/4.1.png",
+    "./images/4.2.png",
+    "./images/4.3.png",
+    "./images/4.4.png",
+    "./images/4.5.png",
+    "./images/4.6.png"
+]
+
+let cnt = 0;
+
+setInterval(() => {
+    groupPanelImage.src = groupPanelImageSources[cnt%6]
+    cnt+=1
+},4000)
