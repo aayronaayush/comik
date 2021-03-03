@@ -94,4 +94,4 @@ let cnt = 0;
 setInterval(() => {
     groupPanelImage.src = groupPanelImageSources[cnt%5]
     cnt+=1
-},4000)
+},5000)
