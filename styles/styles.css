@@ -5,7 +5,7 @@
 }
 
 img {
-  width: 70%;
+  width: 80%;
 }
 
 .message {
@@ -42,5 +42,5 @@ img {
 }
 
 a.navPanel img:hover {
-  width: 80%;
+  width: 90%;
 }
