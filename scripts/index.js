@@ -86,13 +86,12 @@ groupPanelImageSources = [
     "./images/4.2.png",
     "./images/4.3.png",
     "./images/4.4.png",
-    "./images/4.5.png",
-    "./images/4.6.png"
+    "./images/4.5.png"
 ]
 
 let cnt = 0;
 
 setInterval(() => {
-    groupPanelImage.src = groupPanelImageSources[cnt%6]
+    groupPanelImage.src = groupPanelImageSources[cnt%5]
     cnt+=1
 },4000)

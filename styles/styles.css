@@ -8,6 +8,20 @@ img {
   width: 70%;
 }
 
+.message {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.msgContent {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  width: 70%;
+}
+
 .nav {
   background-color: grey;
   padding: 30px;
